@@ -1,0 +1,2 @@
+Now file wil automatically closedNwow this line will get appended in thie file.'
+ this will get new line

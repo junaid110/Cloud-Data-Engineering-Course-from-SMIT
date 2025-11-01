@@ -1,0 +1,11 @@
+{
+  "name": "Junaid Abbas",
+  "age": 30,
+  "isStudent": false,
+  "skills": ["Python", "SQL", "Cloud Data Engineering"],
+  "address": {
+    "street": "123 Main Street",
+    "city": "Lahore",
+    "country": "Pakistan"
+  }
+}
