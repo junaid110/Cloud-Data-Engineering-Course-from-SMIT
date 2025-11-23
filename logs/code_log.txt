@@ -1,0 +1,72 @@
+2025-11-16 15:12:08.410125: Preliminaries complete. Initiating ETL process
+2025-11-16 15:12:08.410705: Fetching https://www.pakwheels.com/used-cars/search/-/?page=1
+2025-11-16 15:12:14.640733: Fetching https://www.pakwheels.com/used-cars/search/-/?page=2
+2025-11-16 15:12:18.000052: Fetching https://www.pakwheels.com/used-cars/search/-/?page=3
+2025-11-16 15:12:21.369998: Extraction complete. Total records: 170
+2025-11-16 15:12:27.011606: Data transformation complete.
+2025-11-16 15:12:29.161687: Data saved to CSV: ./output\pakwheels_cars.csv
+2025-11-16 15:12:29.792251: Data loaded to DB: ./output\pakwheels.db table: pakwheels_cars
+2025-11-16 15:12:29.906473: ETL pipeline finished successfully
+2025-11-16 15:13:21.218972: Data saved to CSV: ./output/pakwheels_cars.csv
+2025-11-16 16:09:14.201176: Preliminaries complete. Initiating ETL process
+2025-11-16 16:09:14.225592: Fetching https://www.pakwheels.com/used-cars/search/-/?page=1
+2025-11-16 16:09:18.325603: Fetching https://www.pakwheels.com/used-cars/search/-/?page=2
+2025-11-16 16:09:21.704401: Fetching https://www.pakwheels.com/used-cars/search/-/?page=3
+2025-11-16 16:09:24.946000: Extraction complete. Total records: 190
+2025-11-16 16:09:24.983328: Data transformation complete.
+2025-11-16 16:09:25.001445: Data saved to CSV: ./output\pakwheels_cars.csv
+2025-11-16 16:09:25.419006: Data loaded to DB: ./output\pakwheels.db table: pakwheels_cars
+2025-11-16 16:09:25.427263: ETL pipeline finished successfully
+2025-11-16 16:09:25.432410: Data saved to CSV: ./output/pakwheels_cars.csv
+2025-11-16 16:10:14.634792: Preliminaries complete. Initiating ETL process
+2025-11-16 16:10:14.635386: Fetching https://www.pakwheels.com/used-cars/search/-/?page=1
+2025-11-16 16:10:19.298565: Fetching https://www.pakwheels.com/used-cars/search/-/?page=2
+2025-11-16 16:10:22.949306: Fetching https://www.pakwheels.com/used-cars/search/-/?page=3
+2025-11-16 16:10:26.609403: Extraction complete. Total records: 198
+2025-11-16 16:10:26.616044: Data transformation complete.
+2025-11-16 16:10:26.619701: Data saved to CSV: ./output\pakwheels_cars.csv
+2025-11-16 16:10:26.908259: Data loaded to DB: ./output\pakwheels.db table: pakwheels_cars
+2025-11-16 16:10:26.919433: ETL pipeline finished successfully
+2025-11-16 16:10:26.925471: Data saved to CSV: ./output/pakwheels_cars.csv
+2025-11-16 16:11:39.837631: Preliminaries complete. Initiating ETL process
+2025-11-16 16:11:39.838151: Fetching https://www.pakwheels.com/used-cars/search/-/?page=1
+2025-11-16 16:11:44.216053: Fetching https://www.pakwheels.com/used-cars/search/-/?page=2
+2025-11-16 16:11:48.016156: Fetching https://www.pakwheels.com/used-cars/search/-/?page=3
+2025-11-16 16:11:51.156070: Extraction complete. Total records: 198
+2025-11-16 16:11:51.162452: Data transformation complete.
+2025-11-16 16:11:51.166059: Data saved to CSV: ./output\pakwheels_cars.csv
+2025-11-16 16:11:51.496323: Data loaded to DB: ./output\pakwheels.db table: pakwheels_cars
+2025-11-16 16:11:51.504609: ETL pipeline finished successfully
+2025-11-16 16:11:51.508044: Data saved to CSV: ./output/pakwheels_cars.csv
+2025-11-16 16:14:21.212336: Preliminaries complete. Initiating ETL process
+2025-11-16 16:14:21.212904: Fetching https://www.pakwheels.com/used-cars/search/-/?page=1
+2025-11-16 16:14:25.210268: Fetching https://www.pakwheels.com/used-cars/search/-/?page=2
+2025-11-16 16:14:29.197079: Fetching https://www.pakwheels.com/used-cars/search/-/?page=3
+2025-11-16 16:14:32.782662: Extraction complete. Total records: 198
+2025-11-16 16:14:32.792426: Data transformation complete.
+2025-11-16 16:14:32.795995: Data saved to CSV: ./output\pakwheels_cars.csv
+2025-11-16 16:14:33.563043: Data loaded to DB: ./output\pakwheels.db table: pakwheels_cars
+2025-11-16 16:14:33.574000: ETL pipeline finished successfully
+2025-11-16 16:14:33.580479: Data saved to CSV: ./output/pakwheels_cars.csv
+2025-11-16 16:17:31.213336: Preliminaries complete. Initiating ETL process
+2025-11-16 16:17:31.213968: Fetching https://www.pakwheels.com/used-cars/search/-/?page=1
+2025-11-16 16:17:35.322971: Fetching https://www.pakwheels.com/used-cars/search/-/?page=2
+2025-11-16 16:17:38.506171: Fetching https://www.pakwheels.com/used-cars/search/-/?page=3
+2025-11-16 16:17:41.763163: Extraction complete. Total records: 192
+2025-11-16 16:17:41.869003: Data transformation complete (duplicates removed).
+2025-11-16 16:18:00.259809: Preliminaries complete. Initiating ETL process
+2025-11-16 16:18:00.260174: Fetching https://www.pakwheels.com/used-cars/search/-/?page=1
+2025-11-16 16:18:04.893291: Fetching https://www.pakwheels.com/used-cars/search/-/?page=2
+2025-11-16 16:18:08.493339: Fetching https://www.pakwheels.com/used-cars/search/-/?page=3
+2025-11-16 16:18:11.976662: Extraction complete. Total records: 192
+2025-11-16 16:18:12.068660: Data transformation complete (duplicates removed).
+2025-11-16 16:18:55.111762: Preliminaries complete. Initiating ETL process
+2025-11-16 16:18:55.112302: Fetching https://www.pakwheels.com/used-cars/search/-/?page=1
+2025-11-16 16:18:59.367023: Fetching https://www.pakwheels.com/used-cars/search/-/?page=2
+2025-11-16 16:19:02.907275: Fetching https://www.pakwheels.com/used-cars/search/-/?page=3
+2025-11-16 16:19:06.491193: Extraction complete. Total records: 184
+2025-11-16 16:19:06.499211: Data transformation complete (duplicates removed).
+2025-11-16 16:19:06.501857: Data saved to CSV: ./output\pakwheels_cars.csv
+2025-11-16 16:19:07.073962: Data loaded to DB: ./output\pakwheels.db table: pakwheels_cars
+2025-11-16 16:19:07.081173: ETL pipeline finished successfully
+2025-11-16 16:19:07.083842: Data saved to CSV: ./output/pakwheels_cars.csv
