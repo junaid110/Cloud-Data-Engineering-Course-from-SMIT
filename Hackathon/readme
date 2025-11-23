@@ -1,68 +1,200 @@
-# Banggood Product Scraper & Analyzer
+Banggood Product Data Pipeline & Analysis
+Data Engineering Hackathon Project (SMIT)
 
-A comprehensive web scraping project that extracts product data from Banggood, performs data cleaning and transformation, and provides exploratory analysis through an interactive Streamlit dashboard.
+This project is an end-to-end Data Engineering Hackathon project where I built a complete data pipeline that scrapes, cleans, analyzes, stores, and visualizes product insights from Banggood.com.
+All tasks were completed during a 12-hour overnight coding sprint for the SMIT Hackathon.
 
-## 📋 Project Overview
+📌 Project Overview
 
-This project consists of three main components:
-- **Web Scraper**: Extracts product data from Banggood using Selenium
-- **Data Processing**: Cleans and transforms the raw scraped data
-- **Interactive Dashboard**: Visualizes insights through a Streamlit application
+The goal was to build a mini real-world data engineering pipeline consisting of:
 
-## Project Architecture
-Data Scraper (scraper.ipynb)
-        ↓
-banggood_products_cleaned.csv
-        ↓
- Data Cleaning (pandas)
-        ↓
-Streamlit Dashboard (streamlit_app.py)
-        ↓
-     User View
-  
+Web Scraping 5 product categories
 
-## 🚀 Features
+Data Cleaning & Feature Engineering
 
-### Data Extraction
-- Scrapes product data from 5 categories:
-  - Chargers
-  - RC Cars
-  - Multi Rotor Parts
-  - Woodworking Clamp
-  - Keyboard & Mouse
-- Extracts: Product Name, Price, Rating, Reviews, URL
-- Handles pagination (2 pages per category)
-- Robust error handling and browser management
+Exploratory Data Analysis
 
-### Data Processing
-- Cleans price data and extracts numeric values
-- Processes ratings and review counts
-- Creates derived features:
-  - Price per Review
-  - High Rating Flag
-  - Price Categories (Cheap, Moderate, Expensive, Luxury)
+SQL Server Storage + Aggregated Queries
 
-### Visualization & Analysis
-- Interactive price analysis by category
-- Review count distributions
-- Price vs Review relationships
-- Product rating analysis
+Visualizations using Matplotlib
 
-## 🛠️ Installation
+Final Analytical Insights
 
-### Prerequisites
-- Python 3.7+
-- Chrome browser
+🏗️ Data Pipeline Architecture (Diagram)
+                           ┌──────────────────────────┐
+                           │      Banggood.com        │
+                           │   (5 Product Categories) │
+                           └─────────────┬────────────┘
+                                         │
+                                         ▼
+                               ┌──────────────────┐
+                               │   Web Scraping   │
+                               │ Requests + BS4   │
+                               └─────────┬────────┘
+                                         │ Raw HTML
+                                         ▼
+                             ┌────────────────────────┐
+                             │ Data Extraction Layer  │
+                             │  (Product Name, Price, │
+                             │   Rating, Reviews, URL)│
+                             └──────────┬────────────┘
+                                         │
+                                         ▼
+                           ┌────────────────────────────┐
+                           │  Data Cleaning (Pandas)    │
+                           │  - Remove symbols          │
+                           │  - Convert types           │
+                           │  - Handle missing values   │
+                           │  - Derived features        │
+                           └────────────┬──────────────┘
+                                         │
+                                         ▼
+                          ┌──────────────────────────────┐
+                          │   Feature Engineering        │
+                          │  - Price per Review          │
+                          │  - High Rating Flag          │
+                          │  - Price Category            │
+                          └────────────┬─────────────────┘
+                                         │
+                                         ▼
+                      ┌────────────────────────────────────┐
+                      │   Exploratory Data Analysis (EDA)   │
+                      │   - Value insights                 │
+                      │   - Top items                      │
+                      │   - Distributions + Correlations   │
+                      └─────────────────┬──────────────────┘
+                                         │
+                                         ▼
+                          ┌────────────────────────────┐
+                          │     SQL Server Storage     │
+                          │ - Unified Table            │
+                          │ - PyODBC Load              │
+                          └────────────┬──────────────┘
+                                         │
+                                         ▼
+                     ┌────────────────────────────────────┐
+                     │   SQL Aggregated Analysis          │
+                     │ - Avg price/rating per category   │
+                     │ - Top reviewed products           │
+                     │ - Category stats                  │
+                     └────────────────────────────────────┘
 
-### Setup
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/banggood-scraper.git
-cd banggood-scraper
+📂 Project Structure
+📁 Banggood-Data-Pipeline/
+│
+├── Project.ipynb          # Full end-to-end notebook
+├── data/                  # Cleaned datasets (optional)
+├── requirements.txt        # Dependencies
+└── README.md               # Documentation
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+🛠️ Tech Stack
+Languages & Tools
 
-# Install dependencies
-pip install -r requirements.txt
+Python
+
+BeautifulSoup
+
+Requests
+
+Pandas, NumPy
+
+Matplotlib
+
+SQL Server
+
+PyODBC
+
+🧹 Data Cleaning & Feature Engineering
+✔ Cleaned Columns
+
+Price → Numeric (US$ removed)
+
+Rating → Converted to float
+
+Reviews → Converted to integer
+
+Removed missing or malformed values
+
+✔ Derived Features
+Feature	Description
+Price_per_Review	Shows value-for-money
+High_Rating_Flag	1 if rating ≥ 4 else 0
+Price_Category	Cheap / Moderate / Expensive
+📊 Exploratory Data Analysis (EDA)
+
+Performed a minimum of 5 analyses, including:
+
+Price distribution per category
+
+Rating vs Price correlation
+
+Top reviewed products
+
+Best value items
+
+Category-wise rating distribution
+
+All visualized with Matplotlib.
+
+🗄️ SQL Server Storage
+
+Data was loaded into SQL Server using PyODBC.
+
+Example schema:
+CREATE TABLE Products (
+    Category VARCHAR(200),
+    Name VARCHAR(MAX),
+    Price FLOAT,
+    Rating FLOAT,
+    Reviews INT,
+    URL VARCHAR(MAX),
+    Price_Clean FLOAT,
+    Rating_Clean FLOAT,
+    Reviews_Clean INT,
+    Price_per_Review FLOAT,
+    High_Rating_Flag INT,
+    Price_Category VARCHAR(50)
+);
+
+🧮 SQL Aggregated Insights
+
+Key queries:
+
+Average rating per category
+
+Average price per category
+
+Product count per category
+
+Top 5 reviewed items
+
+High rating % per category
+
+Stock availability assumption checks
+
+📈 Results & Conclusions
+
+Some categories have high reviews but moderate prices, indicating strong popularity.
+
+Several products have excellent value (low price per review).
+
+Category-wise rating distribution reveals which segments maintain quality.
+
+SQL-based aggregation enabled clear comparisons across categories.
+
+🔗 GitHub Notebook
+
+📄 Project Notebook:
+https://github.com/junaid110/Cloud-Data-Engineering-Course-from-SMIT/blob/main/Hackathon.ipynb
+
+🏁 Future Improvements
+
+Build a Streamlit app
+
+Load data into a cloud warehouse (Snowflake / BigQuery)
+
+Build Airflow DAG for automated scraping
+
+Convert analysis into dashboards (PowerBI or Tableau)
+
+⭐ If you found this useful, consider giving the repo a star!
