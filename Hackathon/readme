@@ -1,200 +1,125 @@
-Banggood Product Data Pipeline & Analysis
-Data Engineering Hackathon Project (SMIT)
+# Banggood Product Data Pipeline — Data Engineering Hackathon Project
 
-This project is an end-to-end Data Engineering Hackathon project where I built a complete data pipeline that scrapes, cleans, analyzes, stores, and visualizes product insights from Banggood.com.
-All tasks were completed during a 12-hour overnight coding sprint for the SMIT Hackathon.
+A complete end‑to‑end **Data Engineering Hackathon Project** I built in one 12‑hour coding night during my SMIT program. The project includes **web scraping, data cleaning, feature engineering, SQL storage, analytics, and visualizations** — designed exactly like a real‑world mini data pipeline.
 
-📌 Project Overview
+---
 
-The goal was to build a mini real-world data engineering pipeline consisting of:
+## 🚀 Project Overview
 
-Web Scraping 5 product categories
+This project collects product data from **Banggood.com** using Python and transforms it into a clean dataset ready for analysis and database storage.
 
-Data Cleaning & Feature Engineering
+### **Key Steps:**
 
-Exploratory Data Analysis
+* Web Scraping using **Requests + BeautifulSoup**
+* Cleaning & preprocessing messy data (price, reviews, ratings)
+* Feature engineering (Price per Review, Rating Flags, Price Category)
+* Exploratory Data Analysis using **Pandas + Matplotlib**
+* Storing cleaned data into **SQL Server** using PyODBC
+* SQL queries for insights and aggregations
+* Visualizations for value products and category stats
 
-SQL Server Storage + Aggregated Queries
+---
 
-Visualizations using Matplotlib
+## 🏗️ Architecture Diagram (Mermaid)
 
-Final Analytical Insights
+```mermaid
+graph TD
+    A[Banggood Website] -->|Scraping: Requests + BeautifulSoup| B[Raw CSV Data]
+    B -->|Pandas Cleaning| C[Cleaned Dataset]
+    C -->|Feature Engineering| D[Enhanced Dataset]
+    D -->|Load via PyODBC| E[SQL Server Database]
+    E -->|SQL Queries| F[Insights]
+    F -->|Matplotlib| G[Visualizations]
+```
 
-🏗️ Data Pipeline Architecture (Diagram)
-                           ┌──────────────────────────┐
-                           │      Banggood.com        │
-                           │   (5 Product Categories) │
-                           └─────────────┬────────────┘
-                                         │
-                                         ▼
-                               ┌──────────────────┐
-                               │   Web Scraping   │
-                               │ Requests + BS4   │
-                               └─────────┬────────┘
-                                         │ Raw HTML
-                                         ▼
-                             ┌────────────────────────┐
-                             │ Data Extraction Layer  │
-                             │  (Product Name, Price, │
-                             │   Rating, Reviews, URL)│
-                             └──────────┬────────────┘
-                                         │
-                                         ▼
-                           ┌────────────────────────────┐
-                           │  Data Cleaning (Pandas)    │
-                           │  - Remove symbols          │
-                           │  - Convert types           │
-                           │  - Handle missing values   │
-                           │  - Derived features        │
-                           └────────────┬──────────────┘
-                                         │
-                                         ▼
-                          ┌──────────────────────────────┐
-                          │   Feature Engineering        │
-                          │  - Price per Review          │
-                          │  - High Rating Flag          │
-                          │  - Price Category            │
-                          └────────────┬─────────────────┘
-                                         │
-                                         ▼
-                      ┌────────────────────────────────────┐
-                      │   Exploratory Data Analysis (EDA)   │
-                      │   - Value insights                 │
-                      │   - Top items                      │
-                      │   - Distributions + Correlations   │
-                      └─────────────────┬──────────────────┘
-                                         │
-                                         ▼
-                          ┌────────────────────────────┐
-                          │     SQL Server Storage     │
-                          │ - Unified Table            │
-                          │ - PyODBC Load              │
-                          └────────────┬──────────────┘
-                                         │
-                                         ▼
-                     ┌────────────────────────────────────┐
-                     │   SQL Aggregated Analysis          │
-                     │ - Avg price/rating per category   │
-                     │ - Top reviewed products           │
-                     │ - Category stats                  │
-                     └────────────────────────────────────┘
+---
 
-📂 Project Structure
-📁 Banggood-Data-Pipeline/
-│
-├── Project.ipynb          # Full end-to-end notebook
-├── data/                  # Cleaned datasets (optional)
-├── requirements.txt        # Dependencies
-└── README.md               # Documentation
+## 🛠️ Tech Stack
 
-🛠️ Tech Stack
-Languages & Tools
+* **Python** (Pandas, NumPy, Requests, BeautifulSoup)
+* **SQL Server 2022** (PyODBC)
+* **Matplotlib**
+* **Jupyter Notebook**
 
-Python
+---
 
-BeautifulSoup
+## 📁 Project Structure
 
-Requests
+```
+📦 Banggood-Data-Pipeline
+├── scrape.py              # Web scraping script
+├── clean_transform.ipynb  # Data cleaning & feature engineering
+├── load_sql.py            # Load into SQL Server
+├── analysis.ipynb         # EDA + Visualizations
+├── data_raw.csv
+├── data_clean.csv
+└── README.md
+```
 
-Pandas, NumPy
+---
 
-Matplotlib
+## 📊 Main Insights Generated
 
-SQL Server
+* Top Reviewed Products
+* Average Rating per Category
+* Best Value Products (Price per Review)
+* Distribution of Price Ranges
+* High Rating Product Percentages
 
-PyODBC
+---
 
-🧹 Data Cleaning & Feature Engineering
-✔ Cleaned Columns
+## 🔍 SQL Queries Implemented
 
-Price → Numeric (US$ removed)
+* Product count per category
+* Average rating per category
+* Maximum reviewed product
+* High‑rating product percentage
 
-Rating → Converted to float
+---
 
-Reviews → Converted to integer
+## 📈 Sample Visualizations
 
-Removed missing or malformed values
+* Best Value Products (Price/Review)
+* Top 10 Reviewed Products
+* Average Rating Per Category
 
-✔ Derived Features
-Feature	Description
-Price_per_Review	Shows value-for-money
-High_Rating_Flag	1 if rating ≥ 4 else 0
-Price_Category	Cheap / Moderate / Expensive
-📊 Exploratory Data Analysis (EDA)
+---
 
-Performed a minimum of 5 analyses, including:
+## ▶ Getting Started
 
-Price distribution per category
+### **1. Install Requirements**
 
-Rating vs Price correlation
+```
+pip install -r requirements.txt
+```
 
-Top reviewed products
+### **2. Run Scraper**
 
-Best value items
+```
+python scrape.py
+```
 
-Category-wise rating distribution
+### **3. Run Transformation Notebook**
 
-All visualized with Matplotlib.
+Open `clean_transform.ipynb` in Jupyter.
 
-🗄️ SQL Server Storage
+### **4. Load Into SQL Server**
 
-Data was loaded into SQL Server using PyODBC.
+```
+python load_sql.py
+```
 
-Example schema:
-CREATE TABLE Products (
-    Category VARCHAR(200),
-    Name VARCHAR(MAX),
-    Price FLOAT,
-    Rating FLOAT,
-    Reviews INT,
-    URL VARCHAR(MAX),
-    Price_Clean FLOAT,
-    Rating_Clean FLOAT,
-    Reviews_Clean INT,
-    Price_per_Review FLOAT,
-    High_Rating_Flag INT,
-    Price_Category VARCHAR(50)
-);
+---
 
-🧮 SQL Aggregated Insights
+## 📌 Links
 
-Key queries:
+🔗 **GitHub Project:** [https://github.com/junaid110/Cloud-Data-Engineering-Course-from-SMIT/blob/main/Hackathon/Project.ipynb](https://github.com/junaid110/Cloud-Data-Engineering-Course-from-SMIT/blob/main/Hackathon/Project.ipynb)
 
-Average rating per category
+---
 
-Average price per category
+## ⭐ Author
 
-Product count per category
+**Junaid Abbas**
+Cloud Data Engineer | Python Developer | Web Scraping
 
-Top 5 reviewed items
-
-High rating % per category
-
-Stock availability assumption checks
-
-📈 Results & Conclusions
-
-Some categories have high reviews but moderate prices, indicating strong popularity.
-
-Several products have excellent value (low price per review).
-
-Category-wise rating distribution reveals which segments maintain quality.
-
-SQL-based aggregation enabled clear comparisons across categories.
-
-🔗 GitHub Notebook
-
-📄 Project Notebook:
-https://github.com/junaid110/Cloud-Data-Engineering-Course-from-SMIT/blob/main/Hackathon.ipynb
-
-🏁 Future Improvements
-
-Build a Streamlit app
-
-Load data into a cloud warehouse (Snowflake / BigQuery)
-
-Build Airflow DAG for automated scraping
-
-Convert analysis into dashboards (PowerBI or Tableau)
-
-⭐ If you found this useful, consider giving the repo a star!
+If you like this project, feel free to ⭐ star the repo!
