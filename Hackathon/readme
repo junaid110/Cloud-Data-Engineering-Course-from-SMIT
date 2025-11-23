@@ -1,0 +1,56 @@
+# Banggood Product Scraper & Analyzer
+
+A comprehensive web scraping project that extracts product data from Banggood, performs data cleaning and transformation, and provides exploratory analysis through an interactive Streamlit dashboard.
+
+## 📋 Project Overview
+
+This project consists of three main components:
+- **Web Scraper**: Extracts product data from Banggood using Selenium
+- **Data Processing**: Cleans and transforms the raw scraped data
+- **Interactive Dashboard**: Visualizes insights through a Streamlit application
+
+## 🚀 Features
+
+### Data Extraction
+- Scrapes product data from 5 categories:
+  - Chargers
+  - RC Cars
+  - Multi Rotor Parts
+  - Woodworking Clamp
+  - Keyboard & Mouse
+- Extracts: Product Name, Price, Rating, Reviews, URL
+- Handles pagination (2 pages per category)
+- Robust error handling and browser management
+
+### Data Processing
+- Cleans price data and extracts numeric values
+- Processes ratings and review counts
+- Creates derived features:
+  - Price per Review
+  - High Rating Flag
+  - Price Categories (Cheap, Moderate, Expensive, Luxury)
+
+### Visualization & Analysis
+- Interactive price analysis by category
+- Review count distributions
+- Price vs Review relationships
+- Product rating analysis
+
+## 🛠️ Installation
+
+### Prerequisites
+- Python 3.7+
+- Chrome browser
+
+### Setup
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/banggood-scraper.git
+cd banggood-scraper
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
