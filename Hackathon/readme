@@ -4,37 +4,22 @@ A comprehensive web scraping project that extracts product data from Banggood, p
 
 ## 📋 Project Overview
 
-```mermaid
-flowchart LR
-  subgraph Repo["GitHub Repository"]
-    direction TB
-    NB[/"scraper.ipynb\n(Selenium scraper)"/]
-    CSV["banggood_products_cleaned.csv\n(/mnt/data/banggood_products_cleaned.csv)"]
-    PROC["Data Processing\n(pandas cleaning & feature calc)"]
-    DB[(SQLite / CSV storage)]
-    APP["streamlit_app.py\n(Streamlit dashboard)"]
-    DEP[/"Deployment\nStreamlit Cloud / Heroku"/]
-  end
-
-  User[(User / Browser)]
-
-  NB --> CSV
-  CSV --> PROC
-  PROC --> DB
-  PROC --> APP
-  DB --> APP
-  APP --> User
-  Repo --> DEP
-  DEP --> APP
-
-  style Repo stroke:#2b6cb0,stroke-width:2px,fill:#f0f8ff
-  style User stroke:#38a169,stroke-width:2px,fill:#f0fff4
-
-
 This project consists of three main components:
 - **Web Scraper**: Extracts product data from Banggood using Selenium
 - **Data Processing**: Cleans and transforms the raw scraped data
 - **Interactive Dashboard**: Visualizes insights through a Streamlit application
+
+## Project Architecture
+Data Scraper (scraper.ipynb)
+        ↓
+banggood_products_cleaned.csv
+        ↓
+ Data Cleaning (pandas)
+        ↓
+Streamlit Dashboard (streamlit_app.py)
+        ↓
+     User View
+  
 
 ## 🚀 Features
 
