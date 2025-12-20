@@ -1,0 +1,10 @@
+# Large binaries / installers
+*.exe
+*.apk
+*.msi
+*.zip
+*.rar
+
+# Data & outputs
+data/
+output/
