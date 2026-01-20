@@ -1,0 +1,138 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    CoinMarketCap Scraper Architecture
+  </text>
+  
+  <!-- Layer 1: Data Source -->
+  <rect x="300" y="60" width="200" height="80" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    CoinMarketCap.com
+  </text>
+  <text x="400" y="115" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    (Data Source)
+  </text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 400 140 L 400 180" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Layer 2: Web Scraper -->
+  <rect x="250" y="180" width="300" height="120" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="400" y="210" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Web Scraping Layer
+  </text>
+  <text x="400" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    Selenium WebDriver + BeautifulSoup
+  </text>
+  <text x="400" y="255" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+    • Dynamic Page Loading
+  </text>
+  <text x="400" y="275" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+    • Auto-scroll & Data Extraction
+  </text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 400 300 L 400 340" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Layer 3: Data Processing -->
+  <rect x="250" y="340" width="300" height="100" fill="#f39c12" stroke="#e67e22" stroke-width="2" rx="5"/>
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Data Processing
+  </text>
+  <text x="400" y="395" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    Python (Jupyter Notebook)
+  </text>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+    Parse & Clean Data
+  </text>
+  
+  <!-- Arrow 3 -->
+  <path d="M 400 440 L 400 480" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Layer 4: Database -->
+  <rect x="250" y="480" width="300" height="100" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+  <text x="400" y="510" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Database Storage
+  </text>
+  <text x="400" y="535" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    SQL Server (PyODBC)
+  </text>
+  <text x="400" y="555" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+    Table: crypto_prices
+  </text>
+  
+  <!-- Side Info Box -->
+  <rect x="20" y="200" width="180" height="280" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2" rx="5"/>
+  <text x="110" y="225" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Technologies Used
+  </text>
+  
+  <text x="30" y="255" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    • Python 3.x
+  </text>
+  <text x="30" y="280" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    • Selenium 4.38.0
+  </text>
+  <text x="30" y="305" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    • BeautifulSoup4
+  </text>
+  <text x="30" y="330" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    • PyODBC 5.2.0
+  </text>
+  <text x="30" y="355" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    • Pandas
+  </text>
+  <text x="30" y="380" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    • SQL Server
+  </text>
+  <text x="30" y="405" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    • Jupyter Notebook
+  </text>
+  
+  <!-- Data Flow Box -->
+  <rect x="600" y="200" width="180" height="280" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2" rx="5"/>
+  <text x="690" y="225" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Data Collected
+  </text>
+  
+  <text x="610" y="255" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • Rank
+  </text>
+  <text x="610" y="275" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • Cryptocurrency Name
+  </text>
+  <text x="610" y="295" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • Current Price
+  </text>
+  <text x="610" y="315" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • 1h Change %
+  </text>
+  <text x="610" y="335" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • 24h Change %
+  </text>
+  <text x="610" y="355" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • 7d Change %
+  </text>
+  <text x="610" y="375" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • Market Cap
+  </text>
+  <text x="610" y="395" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • 24h Volume
+  </text>
+  <text x="610" y="415" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • Circulating Supply
+  </text>
+  <text x="610" y="435" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    • Timestamp
+  </text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e"/>
+    </marker>
+  </defs>
+</svg>
