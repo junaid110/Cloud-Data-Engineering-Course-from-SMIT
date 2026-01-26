@@ -36,10 +36,11 @@ My long-term goal is to grow into a **Cloud Data Engineer** who can support data
 * Pandas, NumPy
 * BeautifulSoup, Selenium
 * Matplotlib, Scikit‑learn
+* Docker
 
 ### Databases
 
-* SQL Server (Learning)
+* SQL Server (T-SQL)
 * SQLite
 
 ### Data Engineering Concepts
@@ -135,7 +136,7 @@ My long-term goal is to grow into a **Cloud Data Engineer** who can support data
 
 ---
 
-## 💼 Career Objective (Recruiter Friendly)
+## 💼 Career Objective 
 
 Seeking **entry-level Data Engineer / Junior Data Engineer** roles where I can contribute to **ETL development, data pipelines, and cloud-based data solutions**, while continuously learning and growing under experienced data professionals.
 
